@@ -1,7 +1,7 @@
 # Bank Churn Analysis In Power B.I.
 
-![Screenshot (54)](https://user-images.githubusercontent.com/72337914/210149674-80e2f7d2-878b-492b-99bb-125ccc6b6e00.png)
-
+## Data Imported to SQL for Data Preprocessing
+```Query
 # Creating the Database and Loading the Data Into it
 create database bank;
 
@@ -28,7 +28,7 @@ JOIN (SELECT RowNumber,CustomerId,Age,Tenure,Balance,NumOfProducts,EstimatedSala
         CASE 
             WHEN GeographyID = 1 THEN 'France'
             WHEN GeographyID = 2 THEN 'Spain'
-            WHEN GeographyID = 3 THEN 'USA'
+            WHEN GeographyID = 3 THEN 'Germany'
         END AS Location,
         CASE 
             WHEN GenderID = 1 THEN 'Male'
@@ -56,9 +56,11 @@ JOIN (SELECT RowNumber,CustomerId,Age,Tenure,Balance,NumOfProducts,EstimatedSala
         END as Credit_div
 FROM bank.bank_churn) c
 ON b.CustomerId = c.CustomerId
+```
 
-# Data is Ready To Be Import Power B.I. Now.
+# Data is Ready To Be Imported in Power B.I. Now.
 
+## Data Analysis 
 
-
+![Screenshot (54)](https://user-images.githubusercontent.com/72337914/210149674-80e2f7d2-878b-492b-99bb-125ccc6b6e00.png)
 
